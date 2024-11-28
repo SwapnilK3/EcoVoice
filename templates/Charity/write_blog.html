@@ -1,0 +1,55 @@
+{%extends 'Charity/base.html'%}
+
+
+{%block head%}
+<link rel = "stylesheet" href = "/static/css/complaint_style.css">
+        
+{%endblock head%}
+
+{% block body%}
+
+<div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    <center><h2 class="">Write your Blog</h2></center>
+   <center><img src="/static/images/blog.svg"></center>
+
+    <form action="edit_info" method="POST">
+      {% csrf_token %}
+      
+        
+      
+     
+
+      <div class="formbold-mb-3">
+       <div>
+          <label for="blog_heading" class="formbold-form-label">
+            Blog Headline
+          </label>
+          <input
+            type="text"
+            name="blog_heading"
+            id="blog_heading"
+            class="formbold-form-input"
+            required
+          />
+        </div>
+
+        </div>
+      
+      <div class="formbold-input-flex">
+        <div>
+        <label for="blog_description" class="formbold-form-label">Blog Description</label>
+        <textarea id="blog_description" name="blog_description" class="formbold-textarea"  required></textarea>
+        <div>
+      </div>
+
+      <button class="formbold-btn">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+
+{%endblock%}

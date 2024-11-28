@@ -1,0 +1,149 @@
+{% extends 'User/base.html'%}
+
+{%block head%}
+
+{%endblock head%}
+
+{% block body%}
+
+<style>
+    .create-block-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    
+    .create-block-btn img {
+        width: 4rem;
+        height: 4rem;
+        
+       
+        
+    }
+    
+    .create-block-btn svg path {
+        fill: #fff;
+    }
+</style>
+
+        <!-- blog section -->
+        <section  class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <h2 class = "sm-title">read these blog for information</h2>
+                    <h3 class = "lg-title">recent blog</h3>
+                    <div class="create-block-btn">
+                        <a href = "/write_blog">
+                        <img src="/static/images/plus.svg" alt="Create Blog">
+                        </a>
+                    </div>
+                </div>
+
+                <div class = "blog-row">
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-1.jpg" alt = "blog">
+                            <span class = "blog-date">Jan 28, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Ved Mahajan | Nashik</span>
+                            <a href = "#">“11 Solutions to the Great Plastic Pollution Problem”</a>
+                            <p class = "text">Plastic pollution is a global crisis that threatens our oceans, wildlife, and health. But there are many ways we can help solve this problem and protect our planet. Here are 11 solutions to the great plastic pollution problem that you can start implementing today.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-2.jpg" alt = "blog">
+                            <span class = "blog-date">May 28, 2023</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Swapnil Kale  | Nashik</span>
+                            <a href = "#">“6 Things You Didn’t Know About Recycling”</a>
+                            <p class = "text">Recycling is not always easy or straightforward. Different types of materials require different processes and facilities. Some plastics are not recyclable at all, while others can be recycled endlessly.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-3.jpg" alt = "blog">
+                            <span class = "blog-date">Feb 28, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Yash Khalkar | Pune</span>
+                            <a href = "#">“Why Plastic Straws Are Getting Banned in Many Countries”</a>
+                            <p class = "text">Plastic straws are among the most common items found in marine litter, posing a threat to wildlife and ecosystems. Many countries and cities have banned or restricted single-use plastic straws to reduce plastic pollution and promote sustainable alternatives. The plastic straws ban is part of a global movement to tackle the plastic crisis and protect our planet.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-4.jpg" alt = "blog">
+                            <span class = "blog-date">Dec 23, 2023</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Pakkya Kale | Mumbai</span>
+                            <a href = "#">“How You Can Make Your Home More Environmentally Friendly Today”</a>
+                            <p class = "text">Making your home more eco-friendly is not only good for the planet, but also for your wallet and well-being. You can start by reducing your energy consumption, using renewable sources, and choosing green products. Here are some easy and effective ways to make your home more environmentally friendly today.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-5.jpg" alt = "blog">
+                            <span class = "blog-date">Nov 28, 2023</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Sachin Patil | Jaipur</span>
+                            <a href = "#">“33 Solutions to Climate Change”</a>
+                            <p class = "text">Climate change is a global challenge that requires urgent and collective action. There are many solutions to reduce greenhouse gas emissions and adapt to the impacts of climate change. Here are 33 solutions that range from renewable energy and green transport to nature-based and social innovations.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-6.jpg" alt = "blog">
+                            <span class = "blog-date">Feb 2, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Kaushik | Delhi </span>
+                            <a href = "#">“How Much Water Does It Take to Make 1 Cup of Coffee?”</a>
+                            <p class = "text">Did you know that your morning cup of coffee requires a lot of water to produce? According to the UN, it takes 140 litres of water to grow, process, and transport enough coffee beans for one cup. This is the water footprint of coffee, and it varies depending on the type and origin of the beans. Here are some facts and tips to reduce your coffee’s water footprint and enjoy a more sustainable brew.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-7.jpg" alt = "blog">
+                            <span class = "blog-date">Jan 20, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Tanishqa Lokhande | Pune</span>
+                            <a href = "#">“The Social Enterprise Turning Plastic Waste into Currency”</a>
+                            <p class = "text">The Plastic Bank is a company that aims to stop plastic pollution by turning waste into currency. The company pays collectors in cash or digital tokens for the plastic they collect, which can then be used to buy essential goods and services. The Plastic Bank also recycles the plastic into Social Plastic®, which is sold to brands and manufacturers.</p>
+                        </div>
+                    </div>
+
+                    <div class = "blog-item my-2 shadow">
+                        <div class = "blog-item-top">
+                            <img src = "static/images/blog-8.jpg" alt = "blog">
+                            <span class = "blog-date">Nov 23, 2024</span>
+                        </div>
+                        <div class = "blog-item-bottom">
+                            <span>Lalita Pedhe | Mumbai</span>
+                            <a href = "#">“How to Easily Plant Trees and Reverse Climate Change”</a>
+                            <p class = "text">Planting trees is one of the most effective ways to combat climate change. Trees absorb carbon dioxide, produce oxygen, and provide habitat for wildlife. By planting trees in your backyard, community, or online, you can help restore ecosystems and create a greener future.</p>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+        </section>
+        <!-- end of blog section -->
+
+        {%endblock body%}
+        

@@ -1,0 +1,117 @@
+{%extends 'Charity/base.html'%}
+
+
+{%block head%}
+<link rel = "stylesheet" href = "/static/css/complaint_style.css">
+        
+{%endblock head%}
+
+{% block body%}
+
+<div class="formbold-main-wrapper">
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    
+   <center><img src="/static/images/Event-Registration.png"></center>
+
+    <form action="events" method="POST">
+      {% csrf_token %}
+      <div class="formbold-form-title">
+        <center><h2 class="">Registor Event</h2></center>
+      
+      </div>
+
+      <div class="formbold-mb-3">
+        <div>
+          <label for="event_headline" class="formbold-form-label">
+            Event Headline
+          </label>
+          <input
+            type="text"
+            name="event_headline"
+            id="event_headline"
+            class="formbold-form-input"
+            required
+          />
+        </div>
+      </div>
+            
+
+      <div class="formbold-input-flex">
+        <div>
+          <label for="event_address" class="formbold-form-label"> Street/Address </label>
+          <textarea
+            type="text"
+            name="event_address"
+            id="event_address"
+            >
+        </textarea>
+        </div>
+
+      </div>
+      <div class="formbold-input-flex">
+      <div>
+        <label for="event_date" class="formbold-form-label"> Date of Event </label>
+        <input
+          type="date"
+          name="event_date"
+          id="event_date"
+          class="formbold-form-input"
+        />
+      </div>
+    </div>
+      
+      <div class="formbold-input-flex">
+        <div>
+          <label for="event_city" class="formbold-form-label"> City </label>
+          <input
+            type="text"
+            name="event_city"
+            id="event_city"
+            class="formbold-form-input"
+          />
+        </div>
+        
+        <div>
+          <label for="event_state" class="formbold-form-label"> State/Prvince </label>
+          <input
+            type="text"
+            name="event_state"
+            id="event_state"
+            class="formbold-form-input"
+          />
+        </div>
+       
+      </div>
+
+      <div class="formbold-input-flex">
+        <div>
+          <label for="event_country" class="formbold-form-label"> Country </label>
+          <input
+            type="text"
+            name="event_country"
+            id="event_country"
+            class="formbold-form-input"
+          />
+        <div>
+          <label for="event_zipcode" class="formbold-form-label"> Post/Zip code </label>
+          <input
+            type="text"
+            name="event_zipcode"
+            id="event_zipcode"
+            class="formbold-form-input"
+          />
+        </div>
+      </div>
+      </div>
+
+      
+
+      <button class="formbold-btn">Submit</button>
+    </form>
+  </div>
+</div>
+</div>
+
+{%endblock%}

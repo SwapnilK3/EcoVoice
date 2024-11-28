@@ -1,0 +1,219 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ECO-voice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "/static/font/fonts.css">
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "/static/css/normalize.css">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "/static/css/utility.css">
+        <link rel = "stylesheet" href = "/static/css/style.css">
+        <link rel = "stylesheet" href = "/static/css/responsive.css">
+    </head>
+    <body>
+          
+       
+        <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "home" class = "site-brand">
+                    ECO<span>voice</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        
+                        
+                        <li class = "nav-item">
+                            <a href = "display_complaints" class = "nav-link">View Complaint</a>
+                        </li>
+                        
+                        <li class = "nav-item">
+                            <a href = "events" class = "nav-link">Registor Events</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a href = "display_donation" class = "nav-link">View Donation</a>
+                        </li>
+
+                        <li class = "nav-item">
+                            <a href = "blogs" class = "nav-link">Blog</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "about" class = "nav-link">About</a>
+                        </li>
+                        <div class="profile-pic">
+                            <img src="/static/images/user.jpeg" class="user-pic" onclick="toggleMenu()">
+                         </div>
+                         <div class="sub-menu-wrap" id="subMenu">
+                            <div class="sub-menu">
+                                <div class="user-info">
+                                
+                                {%if request.user.is_authenticated %}
+                                <center><img src="/static/images/user.jpeg" class="user-pic2"></center>
+                                <h2>{{ user.username}}</h2>
+                                <hr>
+                                <a href = "edit_info" class = "sub-menu-link">Edit profile ></a><br>
+                                <a href = "help" class = "sub-menu-link">Help & support ></a><br>   
+                               
+                               
+                                <a href = "logout" class = "sub-menu-link">Logout</a>
+                                {% else %}
+                                <a href = "login" class = "sub-menu-link">Login</a>
+                                {%endif%}  
+                               
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<br>
+        <div class="container">
+            {% if messages %}
+              {% for message in  messages %}
+      
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                 {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              {% endfor %}
+            {% endif %}
+        </div>
+
+         <!-- end of navbar  -->
+                 <!-- header -->
+        
+            {% block head %}
+      
+            {% endblock head %} 
+           
+          
+        <!-- header -->
+      {% block body %}
+      
+      {% endblock body %} 
+       
+
+        <!-- footer -->
+        <footer class = "py-4">
+            <div class = "container footer-row">
+                <div class = "footer-item">
+                    <a href = "index.html" class = "site-brand">
+                        ECO<span>voice</span>
+                    </a>
+                    <p class = "text">Eco Voice is a website that has features such as filing complaints, donating money, and sharing blogs. Users can file complaints online for any environmental abuse happening in their vicinity or surrounding areas. Users can also donate money to certain organizations that play a major role in environmental activities. Users can also share their experiences and learn from each other in the blogs section.</p>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Follow us on: </h2>
+                    <ul class = "social-links">
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Currently Active in </h2>
+                    <ul>
+                        <li><a href = "#">Thailand</a></li>
+                        <li><a href = "#">Australia</a></li>
+                        <li><a href = "#">Inida</a></li>
+                        <li><a href = "#">Switzerland</a></li>
+                        <li><a href = "#">Germany</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">get in touch with us</span>
+                    <h2 class = "lg-title">contact us</h2>
+                </div>
+
+                <div class = "contact-row">
+                    
+                    <div class = "contact-right my-2">
+                        <div class = "contact-item">
+                            <span class = "contact-icon flex">
+                                <i class = "fa fa-phone-alt"></i>
+                            </span>
+                            <div>
+                                <span>Phone</span>
+                                <p class = "text">+01-584-886-009</p>
+                            </div>
+                        </div>
+                        <div class = "contact-item">
+                            <span class = "contact-icon flex">
+                                <i class = "fa fa-map-marked-alt"></i>
+                            </span>
+                            <div>
+                                <span>Address</span>
+                                <p class = "text">102 East 22nd Street, NY</p>
+                            </div>
+                        </div>
+                        <div class = "contact-item">
+                            <span class = "contact-icon flex">
+                                <i class = "fa fa-envelope"></i>
+                            </span>
+                            <div>
+                                <span>Message</span>
+                                <p class = "text">info@tripboss.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {%if not request.user.is_authenticated %}
+                <div class = "subscribe-form footer-item">
+                    <a href = "signup" class="btn ">Sign Up </a>
+                    
+                </div>
+                {% endif %}
+        </footer>
+        <!-- end of footer -->
+        <script src = "/static/js/script.js">
+            
+        </script>
+        
+    </body>
+</html>

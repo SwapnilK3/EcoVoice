@@ -1,0 +1,48 @@
+{% extends 'User/base.html'%}
+
+{%block head%}
+<link rel = "stylesheet" href = "/static/css/complaint_style.css">
+        
+{%endblock%}
+{%block body%}
+<div class="formbold-main-wrapper">
+
+
+
+  <!-- Author: FormBold Team -->
+  <!-- Learn More: https://formbold.com -->
+  <div class="formbold-form-wrapper">
+    <h1>Login</h1>
+    <center><img src="/static/images/login1.png"></center>
+
+    <form action="login" method="POST">
+    {% csrf_token %}
+      <div class="formbold-mb-3">
+        <label for="country" class="formbold-form-label"> Email </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          
+          class="formbold-form-input"
+        />
+      </div>
+
+      <div class="formbold-mb-3">
+        <label for="password" class="formbold-form-label"> Password </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          
+          class="formbold-form-input"
+        />
+      </div>
+      
+      <center><button class="formbold-btn">Submit</button></center>
+    </form>
+   
+  </div>
+</div>
+
+{%endblock%}
